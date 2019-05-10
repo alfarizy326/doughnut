@@ -86,20 +86,20 @@ async def help(ctx):
   embed.set_footer(text=f"Requested by {ctx.author}",
     icon_url=ctx.author.avatar_url)
 
-  embed.add_field(name='sb (Administrator only)', value='Messages to all users in the server', inline=False)
-  embed.add_field(name='ban (Administrator only)', value='Bans a member from the server', inline=False)
-  embed.add_field(name='kick (Administrator only)', value='Kicks a member from the server', inline=False)
-  embed.add_field(name='mute Administrator only)', value='Mutes a member', inline=False)
-  embed.add_field(name='unmute (Administrator only)', value='Unmutes a member', inline=False)
-  embed.add_field(name='info (Administrator only)', value='Shows information about the user', inline=False)
-  embed.add_field(name='avatar (Administrator Only)', value='Shows the user avatar', inline=False)
-  embed.add_field(name='clear (Administrator only)', value='Clear messages in particular channel', inline=False)
-  embed.add_field(name='about (Administrator only)', value='Shows information about the bot', inline=False)
-  embed.add_field(name='ping (Administrator only)', value='Shows your PING ms', inline=False)
-  embed.add_field(name='r (Administrator only)', value='Add mentioned role to the mentioned user', inline=False)
-  embed.add_field(name='rr (Administrator only)', value='Remove mentioned role from the mentioned user', inline=False)
-  embed.add_field(name='nick (Administrator only)', value='Change the user nickname', inline=False)
-  embed.add_field(name='warn (Administrator only)', value='(Limit: 10 reasons | Ex: one two three etc to ten) Warn the mentioned user', inline=False)
+  embed.add_field(name='!dsb <message>', value='Sends messages to all users in the server', inline=False)
+  embed.add_field(name='!dban <member> [reason]', value='Bans a member from the server', inline=False)
+  embed.add_field(name='!dkick <member> [reason]', value='Kicks a member from the server', inline=False)
+  embed.add_field(name='!dmute <member>', value='Mutes a member', inline=False)
+  embed.add_field(name='!dunmute <member>', value='Unmutes a member', inline=False)
+  embed.add_field(name='!duserinfo <member>', value='Shows information about the user', inline=False)
+  embed.add_field(name='!davatar <member>', value='Shows the user avatar', inline=False)
+  embed.add_field(name='!dclear <number of message>', value='Clear messages in particular channel', inline=False)
+  embed.add_field(name='!dabout', value='Shows information about the bot', inline=False)
+  embed.add_field(name='!dping', value='Shows your Internet speed', inline=False)
+  embed.add_field(name='!daddrole <role> <member>', value='Adds a mentioned role to the mentioned user', inline=False)
+  embed.add_field(name='!dremoverole <role> <member>', value='Removes a mentioned role from the mentioned user', inline=False)
+  embed.add_field(name='!dnick <member>', value='Change the user nickname', inline=False)
+  embed.add_field(name='!dwarn <member> [reason]', value='Warns a member', inline=False)
   await ctx.send(embed=embed)
 
 
@@ -203,7 +203,7 @@ async def about(ctx):
         title = '',
         description = '',
         color=0x8a4b32, timestamp=ctx.message.created_at)
-  embed.add_field(name='BOT SERVER', value='Created by Naufal#6366 ft. Unknown#', inline=False)
+  embed.add_field(name='BOT SERVER', value='Created by Naufal#6366 ft. Unknown', inline=False)
   embed.set_footer(text=f"Requested by {ctx.author}", icon_url=ctx.author.avatar_url,)
   await ctx.send(embed=embed)
 @about.error
