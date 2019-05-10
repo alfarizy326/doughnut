@@ -1,7 +1,2 @@
-discord
-asyncio
-youtube_dl
-pip
-
-
-
+discord.py
+flask
